@@ -1,0 +1,9 @@
+/* nprogress custom color */
+$nprogress-color: #bdbdbd;
+#nprogress .bar {
+  background: $nprogress-color;
+}
+#nprogress .spinner-icon {
+  border-top-color: $nprogress-color;
+  border-left-color: $nprogress-color;
+}

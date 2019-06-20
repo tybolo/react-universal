@@ -1,0 +1,38 @@
+@mixin xs {
+  @media (max-width: 575.98px) { @content }
+}
+
+@mixin sm {
+  @media (min-width: 576px) { @content }
+}
+
+@mixin md {
+  @media (min-width: 768px) { @content }
+}
+
+@mixin lg {
+  @media (min-width: 992px) { @content }
+}
+
+@mixin xl {
+  @media (min-width: 1200px) { @content }
+}
+
+@mixin xxl {
+  @media (min-width: 1600px) { @content }
+}
+
+@mixin gut($arr, $i) {
+  @each $key in $arr {
+    @if $i <= 1 { #{$key}: $i * 4 + px; }
+    @if $i > 1 { #{$key}: ($i - 1) * 8 + px; }
+  }
+}
+
+@mixin gutter($class, $keys) {
+  @for $i from 0 through 6 {
+    .#{$class}#{$i} {
+      @include gut($keys, $i)
+    }
+  }
+}

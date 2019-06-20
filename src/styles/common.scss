@@ -1,0 +1,148 @@
+@import './mixins.scss';
+
+@include gutter( mt, margin-top );
+@include gutter( ml, margin-left );
+@include gutter( mr, margin-right );
+@include gutter( mb, margin-bottom );
+@include gutter( mx, (margin-left, margin-right) );
+@include gutter( my, (margin-top, margin-bottom) );
+
+@include gutter( pt, padding-top );
+@include gutter( pl, padding-left );
+@include gutter( pr, padding-right );
+@include gutter( pb, padding-bottom );
+@include gutter( px, (padding-left, padding-right) );
+@include gutter( py, (padding-top, padding-bottom) );
+
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.text-line-2 {
+  height: 3em;
+  line-height: 1.5em;
+  overflow: hidden;
+}
+.text-line-2:after {
+  display: block;
+  content: '...'
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+/* flag */
+.flag {
+  vertical-align: middle;
+}
+.flag-full {
+  width: 100%;
+}
+.flag-fixed {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.flag-item,
+.flag-body {
+  display: table-cell;
+  vertical-align: inherit;
+  white-space: normal;
+}
+.flag-body {
+  width: 100%;
+}
+.flag-top {
+  vertical-align: top;
+}
+.flag-bottom {
+  vertical-align: bottom;
+}
+.flag-middle {
+  vertical-align: middle;
+}
+/* flag end */
+
+.searchbar {
+  display: table;
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #2196f3;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.searchbar-input,
+.searchbar-item {
+  display: table-cell;
+  vertical-align: middle;
+  width: 1%;
+  height: 100%;
+}
+.searchbar-input {
+  width: 100%;
+  padding: 0 10px;
+  border: 0;
+  outline: 0;
+}
+.searchbar-btn {
+  height: 100%;
+  padding: 0 20px;
+  border: 0;
+  background-color: #2196f3;
+  font-size: 12px;
+  color: #fff;
+}
+.searchbar-select {
+  height: 100%;
+  padding: 0 10px;
+  border: 0;
+  border-left: 1px solid #2196f3;
+  font-size: 12px;
+  outline: 0;
+}
+
+@include sm {
+  .container {
+    width: 576px;
+  }
+}
+@include md {
+  .container {
+    width: 740px;
+  }
+}
+@include lg {
+  .container {
+    width: 940px;
+  }
+}
+@include xl {
+  .container {
+    width: 1140px;
+  }
+}
+@include xxl {
+  .container {
+    width: 1560px;
+  }
+}
