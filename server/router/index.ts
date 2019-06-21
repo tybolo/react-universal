@@ -3,7 +3,6 @@ import render from 'S/middlewares/render'
 import { routes } from '@/router/routes'
 
 import { postRepos } from 'S/controllers/repo'
-// import './download'
 
 const router = new Router()
 

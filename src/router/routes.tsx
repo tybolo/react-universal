@@ -9,8 +9,6 @@ import NoMatch from '@/components/base/404'
 import Repos from '@/containers/Repos'
 import RepoDetails from '@/containers/Repo'
 
-// import Download from '@/components/base/Download'
-
 import { State } from '@/redux/types'
 import { fetchRepo, fetchRepos } from '@/redux/actions'
 
@@ -32,10 +30,6 @@ const routes: RouteConf[] = [
         component: Home,
         exact: true
       },
-      // {
-      //   path: '/download',
-      //   component: Download
-      // },
       {
         path: '/search/:q',
         component: Repos,

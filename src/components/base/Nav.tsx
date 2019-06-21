@@ -32,9 +32,6 @@ class Users extends React.Component<{}, State> {
             <Menu.Item key="collection">
               <Icon type="star" />Collection
             </Menu.Item>
-            {/* <Menu.Item key="download">
-              <NavLink to="/download"><Icon type="heart" />Download</NavLink>
-            </Menu.Item> */}
             <Menu.Item key="about">
               <NavLink to="/about"><Icon type="heart" />About</NavLink>
             </Menu.Item>
